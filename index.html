@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheryl Joy Lita - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --bg-beige: #F9F6F0;
@@ -12,22 +13,43 @@
             --accent-blue: #1E3A8A; 
             --link-blue: #2563EB; 
         }
-        body { font-family: 'Tahoma', sans-serif; background-color: var(--bg-beige); color: var(--text-black); line-height: 1.8; letter-spacing: 0.5px; margin: 0; padding: 0; }
+        
+        /* Subtle Squiggly SVG Background added here */
+        body { 
+            font-family: 'Tahoma', sans-serif; 
+            background-color: var(--bg-beige); 
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM42.11 0c-4.735 1.708-9.92 2.892-18.064 2.892-8.144 0-13.33-1.184-18.065-2.892H0v2c8.077 1.108 13.258 2.224 21.184 4.09 7.925-1.866 13.107-2.982 21.185-4.09V0h-1.042zm36.705 0c-4.735 1.708-9.92 2.892-18.064 2.892-8.144 0-13.33-1.184-18.065-2.892h-5.918v2c8.077 1.108 13.258 2.224 21.184 4.09 7.925-1.866 13.107-2.982 21.185-4.09V0h-1.042zm-18.064 4c8.145 0 13.33-1.184 18.065-2.892h6.334V2c-5.744 1.426-9.951 2-14.85 2-4.898 0-9.105-.574-14.85-2h-6.334v1.108c4.735 1.708 9.92 2.892 18.065 2.892zM0 12c10.626 0 16.855 1.397 26.66 5.063l1.767.662c2.475.923 4.66 1.674 6.724 2.275h-6.335c-.357-.13-.72-.264-1.088-.402l-1.768-.661C16.36 15.347 10.353 14 0 14v-2zm90 0c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335c.357-.13.72-.264 1.088-.402l1.768-.661C83.64 15.347 89.647 14 100 14v-2c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h-6.335c.357-.13.72-.264 1.088-.402l1.768-.661C66.36 15.347 60.353 14 50 14v-2zm-50 0c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14v-2z' fill='%23d1d1d1' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+            color: var(--text-black); 
+            line-height: 1.8; 
+            letter-spacing: 0.5px; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
         .container { max-width: 800px; margin: 40px auto; padding: 20px; }
-        header { text-align: center; margin-bottom: 50px; }
+        header { text-align: center; margin-bottom: 50px; background: var(--card-white); padding: 40px 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h1 { color: var(--accent-blue); font-size: 2.5em; margin-bottom: 5px; }
-        h2 { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px; margin-top: 40px; }
-        h3 { color: var(--accent-blue); margin-bottom: 5px; }
+        h2 { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px; margin-top: 40px; display: flex; align-items: center; gap: 10px;}
+        h3 { color: var(--accent-blue); margin-bottom: 5px; display: flex; align-items: center; gap: 8px;}
         p.subtitle { font-size: 1.2em; color: var(--text-black); margin-top: 0; font-weight: 500; }
+        
+        .contact-links { margin-top: 15px; }
         .contact-links a { color: var(--link-blue); text-decoration: none; margin: 0 10px; font-weight: bold; }
-        .card { background: var(--card-white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .contact-links a:hover { text-decoration: underline; }
+        .contact-links i { margin-right: 5px; color: var(--accent-blue); }
+        
+        .card { background: var(--card-white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; position: relative; }
         .tags { margin-bottom: 15px; }
-        .tag { background: var(--bg-beige); color: var(--accent-blue); padding: 5px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold; display: inline-block; margin-right: 5px; margin-bottom: 5px; }
+        .tag { background: var(--bg-beige); color: var(--accent-blue); padding: 5px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold; display: inline-block; margin-right: 5px; margin-bottom: 5px; border: 1px solid #e0dcd3; }
         .btn { display: inline-block; background-color: var(--accent-blue); color: #FFFFFF; padding: 10px 18px; text-decoration: none; border-radius: 5px; font-size: 0.9em; font-weight: bold; margin-top: 15px; margin-right: 10px; transition: background-color 0.3s ease; }
+        .btn i { margin-right: 6px; }
         .btn:hover { background-color: var(--link-blue); }
         .cert-btn { font-size: 0.8em; padding: 4px 8px; margin-left: 10px; background-color: var(--bg-beige); color: var(--accent-blue); border: 1px solid var(--accent-blue); }
         .cert-btn:hover { background-color: var(--accent-blue); color: #FFFFFF; }
-        .tour-list { background: var(--bg-beige); padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .tour-list { background: var(--bg-beige); padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--accent-blue); }
+        .cert-list { list-style-type: none; padding-left: 0; }
+        .cert-list li { margin-bottom: 12px; display: flex; align-items: center; }
+        .cert-list li::before { content: '\f0a3'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent-blue); margin-right: 10px; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -37,19 +59,19 @@
         <h1>Sheryl Joy Lita</h1>
         <p class="subtitle">Instructional Designer | Learning Experience Designer | Curriculum Architect</p>
         <div class="contact-links">
-            <a href="mailto:sheryljoylita@gmail.com">sheryljoylita@gmail.com</a> | 
-            <a href="https://www.linkedin.com/in/joy-lita" target="_blank">LinkedIn Profile</a> |
-            <span>Belfast, UK</span>
+            <a href="mailto:sheryljoylita@gmail.com"><i class="fas fa-envelope"></i>sheryljoylita@gmail.com</a> | 
+            <a href="https://www.linkedin.com/in/joy-lita" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn Profile</a> |
+            <span><i class="fas fa-map-marker-alt" style="margin-left: 10px; margin-right: 5px; color: var(--accent-blue);"></i>Belfast, UK</span>
         </div>
     </header>
 
     <div class="card">
-        <h2>Hi, I'm Joy Lita</h2>
+        <h2><i class="fas fa-hand-wave"></i> Hi, I'm JoyLita</h2>
         <p>Most corporate training fails because it treats employees like students who need to be lectured. I don’t believe in lecturing. I am a Learning Experience Designer who believes that real competence comes from <em>doing</em>, not listening. I specialize in taking the complex operational procedures found in industries like Finance, Logistics, and Hospitality and turning them into practical, hands-on practice environments. I don't obsess over abstract learning theories; I obsess over KPIs. My goal is to design the simulations and real-world experiences that get your team performing at speed in five days instead of twenty. If the employees aren't performing better on the job, the training hasn't done its work. I bridge the gap between academic design and the reality of getting work done.</p>
         
         <div class="tour-list">
-            <h3>A Quick Tour of Some of My Work:</h3>
-            <ul>
+            <h3><i class="fas fa-map-signs"></i> A Quick Tour of My Work:</h3>
+            <ul style="padding-left: 20px;">
                 <li><strong>Project 1:</strong> See how I re-architected an entire enterprise curriculum to prioritize speed and operational readiness.</li>
                 <li><strong>Project 2:</strong> Explore my storyboards and see how I use scenario-based learning to teach complex guest service behaviors.</li>
                 <li><strong>Project 3:</strong> Watch my 3D aviation simulation in action to see how I build muscle memory through immersive technology.</li>
@@ -57,32 +79,32 @@
         </div>
     </div>
 
-    <h2>Portfolio Projects</h2>
+    <h2><i class="fas fa-laptop-code"></i> Portfolio Projects</h2>
 
     <div class="card">
-        <h3>Project 1: Enterprise Curriculum Architecture</h3>
-        <p><strong>The Challenge:</strong> A global enterprise client needed to enhance their existing New Hire Training Curriculum. I performed a Training Needs Analysis to identify the performance gap and cut out "nice-to-know" fluff to focus on the "need-to-know".</p>
-        <a href="https://docs.google.com/document/d/1_OOiBaCfrqW-6e50CESWwiYBTzNE4wS7/edit?usp=sharing" class="btn" target="_blank">📄 View TNA Report</a>
-        <a href="https://drive.google.com/file/d/1Hi3Vp_CSnqb2KEeZ1AA7IxvK65vgzyMP/view?usp=sharing" class="btn" target="_blank">📄 View ILT TSO</a>
+        <h3><i class="fas fa-sitemap"></i> Project 1: Enterprise Curriculum Architecture</h3>
+        <p><strong>The Challenge:</strong> A global enterprise client needed to reduce new-hire onboarding time. I performed a Training Needs Analysis to identify the performance gap and cut out "nice-to-know" fluff.</p>
+        <a href="https://docs.google.com/document/d/1_OOiBaCfrqW-6e50CESWwiYBTzNE4wS7/edit?usp=sharing" class="btn" target="_blank"><i class="fas fa-file-word"></i> View TNA Report</a>
+        <a href="https://drive.google.com/file/d/1Hi3Vp_CSnqb2KEeZ1AA7IxvK65vgzyMP/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> View ILT TSO</a>
     </div>
 
     <div class="card">
-        <h3>Project 2: Interactive Storyboarding</h3>
-        <p><strong>The Project:</strong> I developed the storyboard for an interactive e-learning module that uses branching scenarios and persona matching to train staff on real-world guest interactions.</p>
-        <a href="https://docs.google.com/document/d/13A43papEuhUJ4aTqOaN0jNBfJzTKtFBY/edit?usp=sharing" class="btn" target="_blank">📄 View Storyboard</a>
-        <a href="https://drive.google.com/file/d/1dzl6OTag6aLgd7PSXXHqgd_8q5KaISTz/view?usp=sharing" class="btn" target="_blank">📄 View E-Learning TSO</a>
+        <h3><i class="fas fa-comments"></i> Project 2: Interactive Storyboarding</h3>
+        <p><strong>The Project:</strong> I developed an interactive storyboard for an e-learning module that uses branching scenarios and persona matching to train staff on real-world guest interactions.</p>
+        <a href="https://docs.google.com/document/d/13A43papEuhUJ4aTqOaN0jNBfJzTKtFBY/edit?usp=sharing" class="btn" target="_blank"><i class="fas fa-file-word"></i> View Storyboard</a>
+        <a href="https://drive.google.com/file/d/1dzl6OTag6aLgd7PSXXHqgd_8q5KaISTz/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> View E-Learning TSO</a>
     </div>
 
     <div class="card">
-        <h3>Project 3: "TP Air" – Immersive Aviation Simulation</h3>
+        <h3><i class="fas fa-plane-departure"></i> Project 3: "TP Air" – Immersive Aviation Simulation</h3>
         <p><strong>The Project:</strong> I built a 3D environment where learners navigate a cabin to complete specific operational tasks, building muscle memory in a risk-free space.</p>
-        <video controls width="100%" controlsList="nodownload" style="margin-top: 15px; border-radius: 8px; border: 1px solid #ddd;">
+        <video controls width="100%" controlsList="nodownload" style="margin-top: 15px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
             <source src="flight_sim_demo.mp4" type="video/mp4">
         </video>
     </div>
 
     <div class="card">
-        <h2>Professional Certifications</h2>
+        <h2><i class="fas fa-award"></i> Professional Certifications</h2>
         <ul class="cert-list">
             <li>Applying Learning Science to Training and Development <a href="CertificateOfCompletion_Applying Learning Science to Training and Development.pdf" class="btn cert-btn" target="_blank">View</a></li>
             <li>Articulate Storyline Essential Training <a href="CertificateOfCompletion_Articulate Storyline Essential Training.pdf" class="btn cert-btn" target="_blank">View</a></li>
